@@ -1009,7 +1009,7 @@ function ImGui:ContainerClass(Frame: Frame, Class, Window)
 			ValueText.Text = NewKey.Name
 			Config.Value = NewKey
 
-			if NewKey.Name == "World69" or NewKey.Name == "BackSpace" then
+			if NewKey.Name == "World69" or NewKey.Name == "Backspace" then
 				ValueText.Text = "Not set"
 				return
 			end
