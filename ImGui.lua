@@ -1005,11 +1005,11 @@ function ImGui:ContainerClass(Frame: Frame, Class, Window)
 		end
 
 		function Config:SetValue(NewKey: Enum.KeyCode)
-			if not NewKey then return end
+			if not NewKey then newKey = Enum.KeyCode.World69 end -- World1-95 keycodes are unused by UserInputService
 			ValueText.Text = NewKey.Name
 			Config.Value = NewKey
 
-			if NewKey == Enum.KeyCode.Backspace then
+			if NewKey.Name == "World69" or NewKey.Name == "BackSpace" then
 				ValueText.Text = "Not set"
 				return
 			end
