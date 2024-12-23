@@ -1031,6 +1031,7 @@ function ImGui:ContainerClass(Frame: Frame, Class, Window)
 
 		Config.Connection = UserInputService.InputBegan:Connect(function(Input, GameProcessed)
 			if not Config.IgnoreGameProcessed and GameProcessed then return end
+			if Config.Value == Enum.KeyCode.Backspace then return end
 
 			if Input.KeyCode == Config.Value then
 				return Callback(Input.KeyCode)
